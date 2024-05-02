@@ -2,8 +2,10 @@
 //const {emailTemplate} = require('./js-foundation/01-template');
 //require('./js-foundation/02-destructuring');
 //const {getUserById} = require('./js-foundation/03-callbacks');
-const {buildMakePerson} = require('./js-foundation/05.2-factory');
-const {getAge, getUUID} = require('./plugins');
+// const {buildMakePerson} = require('./js-foundation/05.2-factory');
+// const {getAge, getUUID} = require('./plugins');
+import {buildMakePerson} from './js-foundation/05.2-factory';
+import  {getAge, getUUID} from './plugins';
 
 //const id = 1;
 

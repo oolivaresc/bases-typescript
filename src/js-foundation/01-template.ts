@@ -1,4 +1,4 @@
-const emailTemplate = `
+export const emailTemplate = `
 <div>
     <h1>Hi, {{name}}</h1>
     <p>Thank for you order.</p>
@@ -6,6 +6,6 @@ const emailTemplate = `
 </div>
 `;
 
-module.exports = {
-    emailTemplate
-}
+// module.exports = {
+//     emailTemplate
+// }

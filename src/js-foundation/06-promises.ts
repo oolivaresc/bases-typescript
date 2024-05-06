@@ -4,9 +4,14 @@ import {httpClient as http} from '../plugins'
 export const getPokemonById = async(id: string|number): Promise<any> => {
 
     //Fetch usando plugin
-    const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
-    const pokemon = await http.get(url);
-    return pokemon;
+    try{
+        const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
+        const pokemon = await http.get(url);
+        return pokemon;
+    }catch(error){
+        throw `Pokemon not found with id: ${id}`;
+    }
+    
 
     //Fetch
     //const url = `https://pokeapi.co/api/v2/pokemon/${id}`;

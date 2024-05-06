@@ -1,10 +1,7 @@
-interface User{
-    id: number;
-    name: string;
-}
-
-const users: User[] = [
- 
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getUserById = void 0;
+const users = [
     {
         id: 1,
         name: 'John Doe',
@@ -14,19 +11,17 @@ const users: User[] = [
         name: 'Jane Doe',
     }
 ];
-
-export const getUserById = (id: number, callback: (err?: string, user?:User) => void) => {
+const getUserById = (id, callback) => {
     const user = users.find(user => user.id === id);
-    if(!user){
-        setTimeout (()=>{
+    if (!user) {
+        setTimeout(() => {
             callback(`User not found with id: ${id}`);
-        }, 2500)
+        }, 2500);
         return;
     }
-
     return callback(undefined, user);
-}
-
+};
+exports.getUserById = getUserById;
 // module.exports = {
 //     getUserById
 // }
